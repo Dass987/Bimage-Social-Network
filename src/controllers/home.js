@@ -1,8 +1,12 @@
 const homeController = {};
+const { Image } =  require('../models/index');
 
-homeController.index = (request, response) => {
+homeController.index = async (request, response) => {
 	
-	response.render('index');
+	const images = await Image.find().sort({ timestamp: -1 });
+	response.render('index', {
+		images
+	});
 
 };
 
