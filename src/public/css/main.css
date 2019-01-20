@@ -1,0 +1,31 @@
+a.brand-logo > img {
+	vertical-align:middle;
+	margin-top:-8px;
+}
+
+div.card, div.card-content, span.card-title, div.card-action {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+span.card-title {
+	padding: 10px !important;
+	font-weight: bold !important;
+}
+
+div.card-action {
+	padding: 10px !important;
+}
+
+#submit-new-image {
+	display: block;
+	width: 100%;
+}
+
+#submit-new-image > i {
+	font-size: 1.3rem;
+	vertical-align: middle;
+	margin-top: -5px;
+	line-height: initial !important;
+}
+
