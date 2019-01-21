@@ -1,3 +1,4 @@
+
 const { Comment, Image } = require('../models');
 
 async function imageCounter() {
