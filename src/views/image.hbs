@@ -37,7 +37,7 @@
 
 <br>
 
-<div class="card hoverable">
+<div class="card z-depth-0">
 	<div class="card-content">
 		<span class="card-title blue-grey darken-1 white-text">
 			<i class="material-icons left">comment</i> 
@@ -47,8 +47,8 @@
 			</button>
 		</span>
 		<br/>
-		<form action="/images/{{image.uniqueId}}/comment" method="POST">
-			<div class="container">
+		<div class="container">
+			<form action="/images/{{image.uniqueId}}/comment" method="POST">
 				<div class="input-field">
 					<input type="text" name="name" id="name">
 					<label for="name">Name</label>
@@ -67,9 +67,25 @@
 						<i class="material-icons left">add_comment</i>Post
 					</button>
 				</div>
-			</div>
-		</form>
+			</form>
 		<br/>
+		<ul class="collection">
+			{{#each comments}}
+				<li class="collection-item avatar">
+					<!--<img src="images/yuna.jpg" alt="" class="circle">-->
+					<img src="http://gravatar.com/avatar/{{gravatar}}?d=monsterid&s=45" alt="" class="circle">
+					<!--<i class="material-icons left">account_circle</i>-->
+					<span class="title">{{name}}</span>
+					<p>
+						- <span style="font-style:italic;">"{{comment}}"</span> <br><br>
+						<i class="material-icons left">access_time</i> {{timeago timestamp}}
+					</p>
+					<a href="/" class="secondary-content deep-purple-text"><i class="material-icons">autorenew</i></a>
+				</li>
+			{{/each}}
+		</ul>
+		</div>
 	</div>
+	<br/>
 </div>
 <br/>
