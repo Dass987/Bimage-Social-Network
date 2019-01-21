@@ -17,7 +17,7 @@ async function imageTotalViewsCounter() {
 		}
 	}]);
 	
-	return result[0].viewsTotal;
+	return result[0] === undefined ? 0 : result[0].viewsTotal;
 
 }
 
@@ -30,7 +30,7 @@ async function likesTotalCounter() {
 		}
 	}]);
 
-	return result[0].likesTotal;
+	return result[0] === undefined ? 0 : result[0].likesTotal;
 
 }
 
