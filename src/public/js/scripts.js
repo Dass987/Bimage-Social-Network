@@ -11,3 +11,28 @@ $("#btn-like").click(function (e) {
 		});
 
 });
+
+$("#btn-delete").click(function (e) {
+	
+	e.preventDefault();
+	let $this = $(this);
+
+	const response = confirm('Are you sure you want to delete this image?');
+
+	if (response) {
+		
+		let imageId = $this.data('id');
+		
+		$.ajax({
+			url: '/images/' + imageId,
+			type: 'DELETE'
+		})
+		.done(function (result) {
+			$this.html('Deleted<i class="material-icons right">check</i>');
+		});
+
+	} else {
+
+	}
+
+});
