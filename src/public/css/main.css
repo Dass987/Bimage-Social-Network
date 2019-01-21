@@ -36,6 +36,7 @@ div.image-field{
 div.image-field > a > img{
 	border: 2px solid #e0e0e0;
 	border-radius: 5px;
+	max-width: 100px;
 }
 
 #image-description {
@@ -49,4 +50,8 @@ div.image-field > a > img{
 
 .image-footer > i{
 	padding: 0 0 -10px 0 !important;
+}
+
+.stats-zone {
+	padding: 10px;
 }

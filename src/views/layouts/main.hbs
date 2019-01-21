@@ -30,11 +30,11 @@
 					<a href="/" class="left brand-logo">
 						<img src="/public/img/icon.png" width="52" alt="Be an image logo"> Bimage
 					</a>
-					<ul class="right hide-on-med-and-down">
+					<!--<ul class="right hide-on-med-and-down">
 						<li><a>Sass</a></li>
 						<li><a>Components</a></li>
 						<li><a>JavaScript</a></li>
-					</ul>
+					</ul>-->
 				</div>
 			</nav>
 		</div>
@@ -43,11 +43,16 @@
 	<main>
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m8">
+				<div class="col s12 m8" style="padding: 10px !important;">
 					{{{ body }}}
 				</div>
-				<div class="col s12 m4">
-
+				<div class="col s12 m4" style="padding: 10px !important;">
+					{{> stats}}
+					<br>
+					{{> popular}}
+					<br>
+					{{> comments}}
+					<br>
 				</div>
 			</div>
 		</div>

@@ -36,3 +36,13 @@ $("#btn-delete").click(function (e) {
 	}
 
 });
+
+$("#comment-form").hide();
+
+$("#btn-toggle-comment").click(function (e) {
+
+	e.preventDefault();
+
+	$("#comment-form").slideToggle();
+
+});

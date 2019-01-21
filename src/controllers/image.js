@@ -4,10 +4,11 @@ const { randomName } = require('../helpers/libs');
 const fs = require('fs-extra');
 const { Image, Comment } = require('../models/index');
 const md5 = require('md5');
+const sidebar = require('../helpers/sidebar');
 
 imageController.index = async (request, response) => {
 	
-	const viewModel = {
+	let viewModel = {
 		image: {},
 		comments: {}
 	};
@@ -22,7 +23,8 @@ imageController.index = async (request, response) => {
 		
 		const comments = await Comment.find({ image_id: image._id });
 		viewModel.comments = comments;
-
+		viewModel = await sidebar(viewModel);
+		
 		response.render('image', viewModel);
 
 	} else {
